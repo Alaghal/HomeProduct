@@ -1,14 +1,12 @@
 package com.homeproducts.user.cmd.api.commands;
 
-import com.homeproducts.user.core.models.User;
-import lombok.Builder;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.axonframework.modelling.command.TargetAggregateIdentifier;
 
 @Data
-@Builder
+@AllArgsConstructor
 public class RemoveUserCommand {
     @TargetAggregateIdentifier
     private String id;
-    private User user;
 }
