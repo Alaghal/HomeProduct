@@ -64,7 +64,7 @@ public class UserAggregate {
 
     @CommandHandler
     public void handle(RemoveUserCommand command) {
-        var event = new UserRemovedEvent();
+        var event = UserRemovedEvent.builder().build();
         event.setId(command.getId());
 
         AggregateLifecycle.apply(event);
