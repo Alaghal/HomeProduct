@@ -11,15 +11,15 @@ import com.homeproducts.user.core.events.UserUpdatedEvent;
 import com.homeproducts.user.core.models.User;
 import org.axonframework.commandhandling.CommandHandler;
 import org.axonframework.eventsourcing.EventSourcingHandler;
+import org.axonframework.modelling.command.AggregateIdentifier;
 import org.axonframework.modelling.command.AggregateLifecycle;
-import org.axonframework.modelling.command.TargetAggregateIdentifier;
 import org.axonframework.spring.stereotype.Aggregate;
 
 import java.util.UUID;
 
 @Aggregate
 public class UserAggregate {
-    @TargetAggregateIdentifier
+    @AggregateIdentifier
     private String id;
     private User user;
 
@@ -30,7 +30,7 @@ public class UserAggregate {
     }
 
     @CommandHandler
-    public UserAggregate(RegisterUserCommand command, PasswordEncoder encoder) {
+    public UserAggregate(RegisterUserCommand command) {
         this.encoder = new PasswordEncoderImpl();
         var newUser = command.getUser();
         newUser.setId(command.getId());

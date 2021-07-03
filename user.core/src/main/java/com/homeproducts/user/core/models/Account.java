@@ -16,8 +16,10 @@ import java.util.List;
 public class Account {
     @Size(min = 2, message = " user name must have a minimum 2 characters")
     private String username;
+
     @Size(min = 7, message = " user password must have a minimum 7 characters")
     private String password;
+
     @NotNull(message = "specify at least 1 user role")
     private List<Role> roles;
 }
