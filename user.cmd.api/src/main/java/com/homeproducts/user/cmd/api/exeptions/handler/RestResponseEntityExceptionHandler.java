@@ -1,4 +1,4 @@
-package com.homeproducts.user.cmd.api.controllers;
+package com.homeproducts.user.cmd.api.exeptions.handler;
 
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
