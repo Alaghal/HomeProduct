@@ -25,7 +25,7 @@ public class UserRemoveController {
         try {
             command.send(new RemoveUserCommand(id));
 
-            return new ResponseEntity<>(new BaseResponse("User successfully delete "), HttpStatus.OK);
+            return new ResponseEntity<>(new BaseResponse("User successfully delete with id " + id), HttpStatus.OK);
         } catch (Exception e) {
             var safeErrorMessage = "Error while processing user request for id - " + id;
             log.error(e.toString());
