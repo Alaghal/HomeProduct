@@ -1,4 +1,4 @@
-package com.homeproducts.user.cmd.api.dto;
+package com.homeproducts.user.core.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,7 +1,7 @@
 package com.homeproducts.user.cmd.api.controllers;
 
 import com.homeproducts.user.cmd.api.commands.UpdateUserCommand;
-import com.homeproducts.user.cmd.api.dto.BaseResponse;
+import com.homeproducts.user.core.dto.BaseResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.axonframework.commandhandling.gateway.CommandGateway;
