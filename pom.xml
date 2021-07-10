@@ -18,6 +18,7 @@
         <module>user.query.api</module>
         <module>user.cmd.api</module>
         <module>user.core</module>
+        <module>user.Oauth2.0</module>
     </modules>
 
 
